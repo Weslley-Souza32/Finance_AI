@@ -22,7 +22,8 @@ model Transaction {
   paymentMethod TransactionPaymentMethod
   date          DateTime
   createdAt     DateTime                 @default(now())
-  updateAt      DateTime                 @default(now())
+  updateAt      DateTime                 @updatedAt
+  userId        String
 }
 
 enum TransactionType {
